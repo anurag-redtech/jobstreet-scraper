@@ -1,0 +1,17 @@
+# Virtual environment
+scrape_env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Google credentials and tokens
+# credentials.json
+token.pickle
+
+# Data files
+*.csv
+*.xlsx
+
+# VS Code settings (optional)
+.vscode/
