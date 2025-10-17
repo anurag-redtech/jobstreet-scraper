@@ -38,6 +38,7 @@ def normalize_indonesian_phone(phone):
 # Setup Chrome driver
 def setup_driver():
     chrome_options = Options()
+    chrome_options.add_argument("--headless")  # No GUI
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
