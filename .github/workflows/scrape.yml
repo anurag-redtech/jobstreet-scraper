@@ -9,7 +9,7 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     env:
-      GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+      GOOGLE_CREDENTIAL_JSON: ${{ secrets.GOOGLE_CREDENTIAL_JSON }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
