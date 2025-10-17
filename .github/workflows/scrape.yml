@@ -8,8 +8,6 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    env:
-      GOOGLE_CREDENTIAL_JSON: ${{ secrets.GOOGLE_CREDENTIAL_JSON }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -24,6 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Decode Google credentials JSON
+        run: |
+          echo "${{ secrets.GOOGLE_CREDENTIAL_JSON }}" | base64 --decode > credentials.json
+
       - name: Run scraper
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: credentials.json
         run: |
           python gsheet.py

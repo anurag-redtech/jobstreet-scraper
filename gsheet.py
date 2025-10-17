@@ -16,7 +16,7 @@ SERVICE_ACCOUNT_FILE = 'credentials.json'  # Your service account JSON
 # The Google Sheets API scopes required
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
-creds_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
+creds_json = os.environ.get("GOOGLE_CREDENTIAL_JSON")
 
 if creds_json:
     # Running on GitHub Actions
