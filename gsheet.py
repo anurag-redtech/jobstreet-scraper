@@ -27,7 +27,7 @@ else:
     creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 client = gspread.authorize(creds)
-
+sheet = client.open_by_key("1q_4CC-d0HxTj33MOR8mReXBB8lf9_iFMeJ7a4SpNklQ")
 
 # Example scraped data
 all_jobs_data = {"name": ["Anurag", "Sunil", "Suhas"], "job_profile": ["DA", "DE", "DS"]}
