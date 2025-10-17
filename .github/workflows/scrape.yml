@@ -30,4 +30,4 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: credentials.json
         run: |
-          python gsheet.py
+          python main.py
